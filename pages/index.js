@@ -8,7 +8,7 @@ export default function Home() {
         <div className="flex-1 text-xl text-primary">Home</div>
         <ul className="gap-2 hidden md:flex">
           <li>
-            <Link href={"/pages/Sofia"}>Music</Link>
+            <Link href={"/pages/sofia"}>Music</Link>
           </li>
           <li>
             <Link href={"/pages/embla"}>Recipes</Link>
