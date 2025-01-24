@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div>
-<<<<<<< HEAD
       <div className="navbar bg-base-100 top-0 sticky z-50">
         <div className="flex-1 text-xl font-semibold">Home</div>
         <ul className="gap-2 hidden md:flex">
@@ -40,8 +39,6 @@ export default function Home() {
         </button>
       </div>
 
-=======
->>>>>>> 12b3df2440f40c5437143a5ad8bda5b2bb7de1e4
       <div
         className="hero min-h-[450px] bg-center"
         style={{
@@ -139,7 +136,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <footer className="footer bg-neutral text-neutral-content p-10">
         <aside>
           <svg
@@ -193,8 +189,6 @@ export default function Home() {
           </div>
         </nav>
       </footer>
-=======
->>>>>>> 12b3df2440f40c5437143a5ad8bda5b2bb7de1e4
     </div>
   );
 }
