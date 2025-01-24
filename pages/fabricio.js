@@ -1,26 +1,37 @@
 import { model } from "@/util/ai";
-import { useEffect, useState } from "react";
-import Card from "@/pages/MovieCard";
+import { useState } from "react";
+
+const startPrompt = " give me 3 random movies from category: ";
 
 export default function Movies() {
-  const [prompt, setPrompt] = useState("");
   const [answer, setAnswer] = useState("");
 
-  async function sendOnPageLoad(question) {
-    const result = await model.generateContent(question);
+  async function sendMoviePrompt(category) {
+    const prompt = startPrompt + category;
+    const result = await model.generateContent(prompt);
     setAnswer(result.response.text());
   }
 
-  useEffect(() => {
-    sendOnPageLoad("top 3 skräck filmer i imdb?");
-  }, []);
-
   return (
     <div>
-      <h2>Top 3 movies for each catogery</h2>
-      <button>
-        <Card></Card>
-      </button>
+      <h2 className="flex justify-center pt-4 font-bold">
+        3 random movies for each category
+      </h2>
+
+      <div className="md:grid md:grid-cols-3 md:justify-center gap-16 m-12 flex flex-col items-center">
+        {["Komedi", "Skräck", "Action", "Drama", "Sport", "Sci-fi"].map(
+          (category) => (
+            <button key={category} onClick={() => sendMoviePrompt(category)}>
+              <div className="card bg-base-100 w-80 shadow-xl">
+                <div className="card-body">
+                  <h2 className="card-title flex justify-center">{category}</h2>
+                </div>
+              </div>
+            </button>
+          )
+        )}
+      </div>
+      <p>{answer}</p>
     </div>
   );
 }
