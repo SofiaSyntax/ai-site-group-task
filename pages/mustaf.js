@@ -1,7 +1,7 @@
 import { model } from "@/util/ai";
 import Link from "next/link";
 
-export default function Recipes() {
+export default function Books() {
   return (
     <div className="navbar bg-base-100 top-0 sticky z-50">
       <Link href={"/"} className="flex-1 text-xl font-semibold">
