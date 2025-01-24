@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <div>
       <div className="navbar bg-base-100 top-0 sticky z-50">
-        <div className="flex-1 text-xl font-semibold">Home</div>
+        <Link href={"/"} className="flex-1 text-xl font-semibold">
+          Home
+        </Link>
+
         <ul className="gap-2 hidden md:flex">
           <li>
             <Link href={"/sofia"}>Music</Link>
