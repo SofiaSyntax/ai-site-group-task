@@ -1,6 +1,6 @@
 import { model } from "@/util/ai";
 import { useEffect, useState } from "react";
-import Card from "@/styles/Card";
+import Card from "@/pages/MovieCard";
 
 export default function Movies() {
   const [prompt, setPrompt] = useState("");
