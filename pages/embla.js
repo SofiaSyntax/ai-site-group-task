@@ -7,13 +7,13 @@ export default function Recipes() {
 
   async function sendPrompt() {
     const result = await model.generateContent(prompt);
-
-    setAnswer(result.response.text());
+    const answerText = result.response.text();
+    setAnswer(answerText);
   }
 
   return (
     <div>
-      <h2>Recipes suggestions</h2>
+      <h2>Recipe suggestions</h2>
       <input
         className="border"
         type="text"
