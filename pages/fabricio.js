@@ -1,6 +1,6 @@
 import { model } from "@/util/ai";
 import { useEffect, useState } from "react";
-import Card from "@/styles/Card";
+import Card from "@/pages/MovieCard";
 
 export default function Movies() {
   const [prompt, setPrompt] = useState("");
@@ -19,9 +19,7 @@ export default function Movies() {
     <div>
       <h2>Top 3 movies for each catogery</h2>
       <button>
-        <Card>
-          <p>{answer}</p>
-        </Card>
+        <Card></Card>
       </button>
     </div>
   );
