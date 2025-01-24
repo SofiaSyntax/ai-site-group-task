@@ -8,18 +8,18 @@ export default function Home() {
         <div className="flex-1 text-xl font-semibold">Home</div>
         <ul className="gap-2 hidden md:flex">
           <li>
-            <Link href={"/pages/sofia"}>Music</Link>
+            <Link href={"/sofia"}>Music</Link>
           </li>
           <li>
-            <Link href={"/pages/embla"}>Recipes</Link>
+            <Link href={"/embla"}>Recipes</Link>
           </li>
           <li>
-            <Link href={"/pages/fabricio"}>Movies</Link>
+            <Link href={"/fabricio"}>Movies</Link>
           </li>
           <li>
-            <Link href={"/pages/mustaf"}>Books</Link>
+            <Link href={"/mustaf"}>Books</Link>
           </li>
-          <Link href={"/pages/ahmet"}>Games</Link>
+          <Link href={"/ahmet"}>Games</Link>
           <li></li>
         </ul>
         <button className="btn btn-square btn-ghost md:hidden">
