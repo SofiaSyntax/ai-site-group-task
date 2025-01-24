@@ -1,10 +1,23 @@
-export default function Card({ href, imgAlt, imgSrc, children }) {
+export default function Card() {
   return (
-    <div className="w-80 border border-black ">
-      <a href={href}>
-        <img src={imgSrc} alt={imgAlt} />
-      </a>
-      <div>{children}</div>
+    <div className=" flex gap-10">
+      <div className="card bg-base-100 w-96 shadow-xl">
+        <div className="card-body">
+          <h2 className="card-title">komedi</h2>
+        </div>
+      </div>
+
+      <div className="card bg-base-100 w-96 shadow-xl">
+        <div className="card-body">
+          <h2 className="card-title">skräck</h2>
+        </div>
+      </div>
+
+      <div className="card bg-base-100 w-96 shadow-xl">
+        <div className="card-body">
+          <h2 className="card-title">skräck</h2>
+        </div>
+      </div>
     </div>
   );
 }

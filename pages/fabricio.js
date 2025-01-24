@@ -19,9 +19,7 @@ export default function Movies() {
     <div>
       <h2>Top 3 movies for each catogery</h2>
       <button>
-        <Card>
-          <p>{answer}</p>
-        </Card>
+        <Card></Card>
       </button>
     </div>
   );
