@@ -23,6 +23,7 @@ export default function Header() {
         <Link href={"/ahmet"}>Games</Link>
         <li></li>
       </ul>
+
       <button className="btn btn-square btn-ghost md:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
