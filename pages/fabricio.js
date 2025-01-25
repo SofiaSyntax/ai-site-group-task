@@ -14,24 +14,43 @@ export default function Movies() {
 
   return (
     <div>
-      <h2 className="flex justify-center pt-4 font-bold">
-        3 random movies for each category
-      </h2>
-
-      <div className="md:grid md:grid-cols-3 md:justify-center gap-16 m-12 flex flex-col items-center">
-        {["Komedi", "Skräck", "Action", "Drama", "Sport", "Sci-fi"].map(
-          (category) => (
+      <div
+        className="grid w-full bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url(https://img.freepik.com/free-vector/beautiful-wavy-background_23-2148465606.jpg?ga=GA1.1.1667245943.1733688417&semt=ais_hybrid)",
+        }}
+      >
+        <h2 className="flex justify-center pt-4 text-2xl font-semibold ">
+          Get 3 random movies to watch from each category:
+        </h2>
+        <div className="md:grid md:grid-cols-3 md:justify-center md:gap-16 md:m-6 flex flex-wrap gap-8 m-4 justify-center ">
+          {[
+            "Comedy",
+            "Thriller",
+            "Action",
+            "Drama",
+            "Sport",
+            "Romance",
+            "Anime",
+            "Crime",
+            "Sci-fi",
+          ].map((category) => (
             <button key={category} onClick={() => sendMoviePrompt(category)}>
-              <div className="card bg-base-100 w-80 shadow-xl">
+              <div className="card bg-cyan-950 w-80 shadow-xl">
                 <div className="card-body">
                   <h2 className="card-title flex justify-center">{category}</h2>
                 </div>
               </div>
             </button>
-          )
-        )}
+          ))}
+        </div>
+
+        <div>
+          <h3 className=" text-2xl font-semibold">Movies:</h3>
+          <p className=" font-medium m-4">{answer}</p>
+        </div>
       </div>
-      <p>{answer}</p>
     </div>
   );
 }

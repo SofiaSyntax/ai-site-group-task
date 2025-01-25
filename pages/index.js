@@ -9,7 +9,8 @@ export default function Home() {
         style={{
           backgroundImage:
             "url(https://img.freepik.com/free-photo/closeup-woman-vr-glasses-float-neon-space-with-cables-attached-her-metaverse-avatar-concept_1217-3924.jpg?t=st=1737643352~exp=1737646952~hmac=1e0fb6d5a1dd8f27d9c252003e25d6a35901b7fb7544dc69888ee361709b8e79&w=1380)",
-        }}>
+        }}
+      >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-md">
@@ -31,14 +32,18 @@ export default function Home() {
               alt="Music"
             />
           </figure>
+
           <div className="card-body">
             <h2 className="card-title">Music</h2>
             <p>Click the button to watch on Jetflix app.</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Watch</button>
+              <Link href={"/sofia"}>
+                <button className="btn btn-primary">Watch</button>
+              </Link>
             </div>
           </div>
         </div>
+
         <div className="card card-side bg-base-100 shadow-xl">
           <figure>
             <img
@@ -47,10 +52,12 @@ export default function Home() {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">New movie is released!</h2>
+            <h2 className="card-title">Recipes</h2>
             <p>Click the button to watch on Jetflix app.</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Watch</button>
+              <Link href={"/embla"}>
+                <button className="btn btn-primary">Watch</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -62,10 +69,12 @@ export default function Home() {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">New movie is released!</h2>
+            <h2 className="card-title">Movies</h2>
             <p>Click the button to watch on Jetflix app.</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Watch</button>
+              <Link href={"/fabricio"}>
+                <button className="btn btn-primary">Watch</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -77,10 +86,12 @@ export default function Home() {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">New movie is released!</h2>
+            <h2 className="card-title">Books</h2>
             <p>Click the button to watch on Jetflix app.</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Watch</button>
+              <Link href={"/mustaf"}>
+                <button className="btn btn-primary">Watch</button>
+              </Link>
             </div>
           </div>
         </div>
@@ -92,10 +103,12 @@ export default function Home() {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">New movie is released!</h2>
+            <h2 className="card-title">Games</h2>
             <p>Click the button to watch on Jetflix app.</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Watch</button>
+              <Link href={"/ahmet"}>
+                <button className="btn btn-primary">Watch</button>
+              </Link>
             </div>
           </div>
         </div>
