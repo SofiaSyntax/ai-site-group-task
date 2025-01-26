@@ -1,7 +1,8 @@
 import { model } from "@/util/ai";
 import { useState } from "react";
 
-const startPrompt = "Give me recommendations for music based on this genre: ";
+const startPrompt =
+  "Give me 5 recommendations for music artists based on this genre: ";
 // const endPrompt = " Give me the answer as a JSON with the following data: artist name, song name, and duration of the song.";
 
 export default function Music() {

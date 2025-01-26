@@ -1,9 +1,9 @@
 import { model } from "@/util/ai";
 import { useEffect, useState } from "react";
-import Card from "@/styles/Card";
+import Card from "@/pages/BooksCard.js";
 
-export default function Movies() {
-  const [prompt, setPrompt] = useState("");
+export default function Books() {
+  const [category, setCategory] = useState("");
   const [answer, setAnswer] = useState("");
 
   async function sendOnPageLoad(question) {
@@ -12,44 +12,34 @@ export default function Movies() {
   }
 
   useEffect(() => {
-    useEffect(() => {
-      sendOnPageLoad("Top 3 books in Akademibokhandeln?");
-    }, []);
-  }, []);
+    if (category) {
+      sendOnPageLoad(`Top 3 books in ${category}`);
+    }
+  }, [category]);
 
   return (
     <div>
-      <h2>Top 3 books for each catogery</h2>
-      <button>
-        <Card>
-          <p>{answer}</p>
-        </Card>
-      </button>
+      <h2>Top 3 Books for Each Category </h2>
+
+      <select
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        className="border p-1"
+      >
+        <option value="">Select a category</option>
+        <option value="Novels">Novels</option>
+        <option value="Thriller">Thriller</option>
+        <option value="YA">YA books</option>
+      </select>
+
+      <Card>
+        <p>
+          {category
+            ? `Selected category: ${category}`
+            : "Select a category for book suggestions."}
+        </p>
+        <p>{answer}</p>
+      </Card>
     </div>
   );
 }
-return (
-  <div>
-    <h2>Top 3 Books for Each Category</h2>
-
-    {/* Dropdown för att välja kategori */}
-    <select
-      value={category}
-      onChange={(e) => setCategory(e.target.value)}
-      className="border p-2"
-    >
-      <option value="">Select a category</option>
-      <option value="Novels">Novels</option>
-      <option value="Thriller">Thriller</option>
-      <option value="YA">YA books</option>
-    </select>
-
-    <Card>
-      <p>
-        {category
-          ? `Selected category: ${category}`
-          : "Select a category for book suggestions."}
-      </p>
-    </Card>
-  </div>
-);

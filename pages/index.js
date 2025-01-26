@@ -1,16 +1,21 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
-      <div
-        className="hero min-h-[450px] bg-center"
-        style={{
-          backgroundImage:
-            "url(https://img.freepik.com/free-photo/closeup-woman-vr-glasses-float-neon-space-with-cables-attached-her-metaverse-avatar-concept_1217-3924.jpg?t=st=1737643352~exp=1737646952~hmac=1e0fb6d5a1dd8f27d9c252003e25d6a35901b7fb7544dc69888ee361709b8e79&w=1380)",
-        }}
-      >
+      <div className="hero bg-center">
+        <Image
+          src="/images/aiheader.jpg"
+          alt="Hero Image"
+          width={2000}
+          height={200}
+          objectFit="cover"
+          objectPosition="center"
+          layout="responsive"
+        />
+
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-md">
