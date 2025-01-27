@@ -37,11 +37,11 @@ export default function Movies() {
             "Sci-fi",
           ].map((category) => (
             <div key={category} onClick={() => sendMoviePrompt(category)}>
-              <div className="card shadow-xl bg-slate-900 hover:bg-slate-950 ">
+              <div className="card shadow-xl bg-slate-900 ">
                 <div className="card-body">
                   <h2 className="card-title">{category}</h2>
-                  <h3>völj bland</h3>
-                  <div className="card-actions justify-end">
+                  <h3>Get {category} movies</h3>
+                  <div className="card-actions md:justify-end justify-center">
                     <button className="btn btn-primary">recommend</button>
                   </div>
                 </div>
