@@ -7,7 +7,7 @@ const startPrompt = "30 minute recipe suggestion cooking with:";
 // const stepByStepPrompt =
 //   " provide the step by step instructions in plain text in an ordered list";
 const endPrompt =
-  " give the answer in plain text as a json with the following data: name of the meal, ingredient list, and step-by-steps ";
+  " give the answer in plain text with the following data: name of the meal, ingredient list, and step-by-steps ";
 
 export default function Recipes() {
   const [answer, setAnswer] = useState("");
@@ -58,7 +58,7 @@ export default function Recipes() {
               <div className="card shadow-xl bg-slate-900 hover:bg-slate-950">
                 <div className="card-body">
                   <h2 className="card-title">{food}</h2>
-                  <h3>Get {food} recipes</h3>
+                  <h3>Get a {food} recipe</h3>
                   <div className="card-actions justify-end">
                     <button className="btn btn-primary">
                       Give me a recipe
@@ -71,13 +71,11 @@ export default function Recipes() {
         </div>
         <div>
           <h3 className=" text-2xl font-semibold px-6">30 minute recipe:</h3>
-          <p>{answer}</p>
+          <pre className="px-6 whitespace-pre-wrap font-semibold font-sans">
+            {answer}
+          </pre>
         </div>
       </div>
-
-      {/* <h2>Name of the dish</h2>
-      <h2>Ingredients</h2>
-      <h2>Step by Step intructions</h2> */}
     </div>
   );
 }
