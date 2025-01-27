@@ -22,9 +22,10 @@ export default function Home() {
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl font-bold">Hello There</h1>
             <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              Welcome to our new AI-site, whether you're looking for
+              inspiration, searching for new ideas or want to explore new AI
+              tools, our website makes it easy to find innovative ideas and
+              solutions. Look around and get inspired!
             </p>
             <button className="btn btn-primary">Get Started</button>
           </div>
@@ -45,7 +46,7 @@ export default function Home() {
 
           <div className="card-body">
             <h2 className="card-title">Music</h2>
-            <p>Click the button to watch on Jetflix app.</p>
+            <p>Click the button to get some new music for your playlist.</p>
             <div className="card-actions justify-end">
               <Link href={"/sofia"}>
                 <button className="btn btn-primary">Watch</button>
@@ -67,7 +68,7 @@ export default function Home() {
           </figure>
           <div className="card-body">
             <h2 className="card-title">Recipes</h2>
-            <p>Click the button to watch on Jetflix app.</p>
+            <p>Click the button to get inspired and try some new recipies.</p>
             <div className="card-actions justify-end">
               <Link href={"/embla"}>
                 <button className="btn btn-primary">Watch</button>
@@ -88,7 +89,10 @@ export default function Home() {
           </figure>
           <div className="card-body">
             <h2 className="card-title">Movies</h2>
-            <p>Click the button to watch on Jetflix app.</p>
+            <p>
+              Click the button and pick between some movie you probably never
+              watched.
+            </p>
             <div className="card-actions justify-end">
               <Link href={"/fabricio"}>
                 <button className="btn btn-primary">Watch</button>
@@ -109,7 +113,9 @@ export default function Home() {
           </figure>
           <div className="card-body">
             <h2 className="card-title">Books</h2>
-            <p>Click the button to watch on Jetflix app.</p>
+            <p>
+              Click the button to try some new books between different genres.
+            </p>
             <div className="card-actions justify-end">
               <Link href={"/mustaf"}>
                 <button className="btn btn-primary">Watch</button>
@@ -130,7 +136,9 @@ export default function Home() {
           </figure>
           <div className="card-body">
             <h2 className="card-title">Games</h2>
-            <p>Click the button to watch on Jetflix app.</p>
+            <p>
+              Click the button for some games to try depending on your level.
+            </p>
             <div className="card-actions justify-end">
               <Link href={"/ahmet"}>
                 <button className="btn btn-primary">Watch</button>
