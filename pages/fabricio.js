@@ -24,6 +24,12 @@ export default function Movies() {
         <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold ">
           Choose a genre, and AI will recommend some movies for you to watch
         </h2>
+
+        <div className="m-4">
+          <h3 className=" text-2xl font-medium px-6">Movie recommendations:</h3>
+          <p>{answer}</p>
+        </div>
+
         <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center ">
           {[
             "Comedy",
@@ -37,7 +43,7 @@ export default function Movies() {
             "Sci-fi",
           ].map((category) => (
             <div key={category} onClick={() => sendMoviePrompt(category)}>
-              <div className="card shadow-xl bg-slate-900 ">
+              <div className="card shadow-xl bg-slate-900 hover:bg-slate-950 ">
                 <div className="card-body">
                   <h2 className="card-title">{category}</h2>
                   <h3>Get {category} movies</h3>
@@ -49,12 +55,18 @@ export default function Movies() {
             </div>
           ))}
         </div>
-
-        <div>
+        {/* 
+        <div className="m-4">
           <h3 className=" text-2xl font-semibold px-6">Movies:</h3>
-          <p className=" font-medium m-4">{answer}</p>
-        </div>
+          <div className="mt-4 flex flex-col space-y-4 overflow-y-auto max-h-96">
+            {renderMovies()}
+          </div>
+        </div> */}
       </div>
     </div>
   );
+}
+
+{
+  /* <p className=" font-medium m-4">{answer}</p> */
 }
