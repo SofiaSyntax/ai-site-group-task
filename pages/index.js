@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
+    <div >
       <div className="hero bg-center">
         <Image
           className=" max-h-96 sm:max-h-80 md:max-h-96 lg:max-h-160 xl:max-h-192"
@@ -16,7 +16,6 @@ export default function Home() {
           objectPosition="center"
           layout="responsive"
         />
-
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-md">
@@ -31,118 +30,121 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="md:grid md:grid-cols-2 flex flex-col gap-4 m-4">
-        <div className="card card-side bg-base-100 shadow-xl ">
-          <figure className="flex-shrink-0 w-40 max-h-52">
-            <Image
-              className="object-cover min-h-full"
-              src="/images/redvinyle.jpg"
-              alt="Vinyle image"
-              width={256}
-              height={160}
-              layout="responsive"
-            />
-          </figure>
 
-          <div className="card-body">
-            <h2 className="card-title">Music</h2>
-            <p>Click the button to get some new music for your playlist.</p>
-            <div className="card-actions justify-end">
-              <Link href={"/sofia"}>
-                <button className="btn btn-primary">Watch</button>
-              </Link>
-            </div>
-          </div>
-        </div>
+      <div className="md:grid md:grid-cols-1 md:w-full max-w-6xl mx-auto">
+        <div className="md:grid md:grid-cols-2 flex flex-col gap-10 p-10 md:mx-auto  md:justify-center">
+          <div className="card card-side bg-base-100 shadow-xl ">
+            <figure className="flex-shrink-0 w-40 max-h-52">
+              <Image
+                className="object-cover min-h-full"
+                src="/images/redvinyle.jpg"
+                alt="Vinyl image"
+                width={256}
+                height={160}
+                layout="responsive"
+              />
+            </figure>
 
-        <div className="card card-side bg-base-100 shadow-xl">
-          <figure className="flex-shrink-0 w-40 max-h-52">
-            <Image
-              className="object-cover min-h-full"
-              src="/images/recipies.jpg"
-              alt="Recipies Image"
-              width={256}
-              height={160}
-              layout="responsive"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Recipes</h2>
-            <p>Click the button to get inspired and try some new recipies.</p>
-            <div className="card-actions justify-end">
-              <Link href={"/embla"}>
-                <button className="btn btn-primary">Watch</button>
-              </Link>
+            <div className="card-body">
+              <h2 className="card-title">Music</h2>
+              <p>Click the button to get some new music for your playlist.</p>
+              <div className="card-actions justify-end">
+                <Link href={"/sofia"}>
+                  <button className="btn btn-primary">Watch</button>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="card card-side bg-base-100 shadow-xl">
-          <figure className="flex-shrink-0 w-40 max-h-52">
-            <Image
-              className="object-cover min-h-full"
-              src="/images/movies.jpg"
-              alt="Movies Image"
-              width={256}
-              height={160}
-              layout="responsive"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Movies</h2>
-            <p>
-              Click the button and pick between some movie you probably never
-              watched.
-            </p>
-            <div className="card-actions justify-end">
-              <Link href={"/fabricio"}>
-                <button className="btn btn-primary">Watch</button>
-              </Link>
+
+          <div className="card card-side bg-base-100 shadow-xl">
+            <figure className="flex-shrink-0 w-40 max-h-52">
+              <Image
+                className="object-cover min-h-full"
+                src="/images/recipies.jpg"
+                alt="Recipies Image"
+                width={256}
+                height={160}
+                layout="responsive"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">Recipes</h2>
+              <p>Click the button to get inspired and try some new recipies.</p>
+              <div className="card-actions justify-end">
+                <Link href={"/embla"}>
+                  <button className="btn btn-primary">Watch</button>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="card card-side bg-base-100 shadow-xl">
-          <figure className="flex-shrink-0 w-40 max-h-52">
-            <Image
-              className="object-cover min-h-full"
-              src="/images/books.jpg"
-              alt="Books Image"
-              width={256}
-              height={160}
-              layout="responsive"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Books</h2>
-            <p>
-              Click the button to try some new books between different genres.
-            </p>
-            <div className="card-actions justify-end">
-              <Link href={"/mustaf"}>
-                <button className="btn btn-primary">Watch</button>
-              </Link>
+          <div className="card card-side bg-base-100 shadow-xl">
+            <figure className="flex-shrink-0 w-40 max-h-52">
+              <Image
+                className="object-cover min-h-full"
+                src="/images/movies.jpg"
+                alt="Movies Image"
+                width={256}
+                height={160}
+                layout="responsive"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">Movies</h2>
+              <p>
+                Click the button and pick between some movie you probably never
+                watched.
+              </p>
+              <div className="card-actions justify-end">
+                <Link href={"/fabricio"}>
+                  <button className="btn btn-primary">Watch</button>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-        <div className=" md:col-span-2 md:justify-self-center card card-side bg-base-100 shadow-xl">
-          <figure className="flex-shrink-0 w-40 max-h-52">
-            <Image
-              className="object-cover min-h-full"
-              src="/images/games.jpg"
-              alt="Games Image"
-              width={256}
-              height={160}
-              layout="responsive"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Games</h2>
-            <p>
-              Click the button for some games to try depending on your level.
-            </p>
-            <div className="card-actions justify-end">
-              <Link href={"/ahmet"}>
-                <button className="btn btn-primary">Watch</button>
-              </Link>
+          <div className="card card-side bg-base-100 shadow-xl">
+            <figure className="flex-shrink-0 w-40 max-h-52">
+              <Image
+                className="object-cover min-h-full"
+                src="/images/books.jpg"
+                alt="Books Image"
+                width={256}
+                height={160}
+                layout="responsive"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">Books</h2>
+              <p>
+                Click the button to try some new books between different genres.
+              </p>
+              <div className="card-actions justify-end">
+                <Link href={"/mustaf"}>
+                  <button className="btn btn-primary">Watch</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="md:col-span-2 md:max-w-[516px] md:justify-self-center card card-side bg-base-100 shadow-xl">
+            <figure className="flex-shrink-0 w-40 max-h-52">
+              <Image
+                className="object-cover min-h-full"
+                src="/images/games.jpg"
+                alt="Games Image"
+                width={256}
+                height={160}
+                layout="responsive"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">Games</h2>
+              <p>
+                Click the button for some games to try depending on your level.
+              </p>
+              <div className="card-actions justify-end">
+                <Link href={"/ahmet"}>
+                  <button className="btn btn-primary">Watch</button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
