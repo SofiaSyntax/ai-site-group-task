@@ -27,23 +27,26 @@ export default function Header() {
         <li>
           <Link href={"/mustaf"}>Books</Link>
         </li>
-        <Link href={"/ahmet"}>Games</Link>
+        <Link href={"/ahmet"}>AI Quiz Game</Link>
         <li></li>
       </ul>
 
       <button
         className="btn btn-square btn-ghost md:hidden"
-        onClick={toggleMenu}>
+        onClick={toggleMenu}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          className="inline-block h-5 w-5 stroke-current">
+          className="inline-block h-5 w-5 stroke-current"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
         </svg>
       </button>
       {isOpen && (
@@ -61,7 +64,7 @@ export default function Header() {
             <Link href={"/mustaf"}>Books</Link>
           </li>
           <li>
-            <Link href={"/ahmet"}>Games</Link>
+            <Link href={"/ahmet"}>AI Quiz Game</Link>
           </li>
         </ul>
       )}
