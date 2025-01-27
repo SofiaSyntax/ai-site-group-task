@@ -19,14 +19,13 @@ export default function Home() {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello There</h1>
+            <h1 className="mb-5 text-5xl font-bold">Welcome to the future</h1>
             <p className="mb-5">
               Welcome to our new AI-site, whether you're looking for
               inspiration, searching for new ideas or want to explore new AI
               tools, our website makes it easy to find innovative ideas and
               solutions. Look around and get inspired!
             </p>
-            <button className="btn btn-primary">Get Started</button>
           </div>
         </div>
       </div>
@@ -50,7 +49,7 @@ export default function Home() {
               <p>Click the button to get some new music for your playlist.</p>
               <div className="card-actions justify-end">
                 <Link href={"/sofia"}>
-                  <button className="btn btn-primary">Watch</button>
+                  <button className="btn btn-primary">Take me There!</button>
                 </Link>
               </div>
             </div>
@@ -72,7 +71,7 @@ export default function Home() {
               <p>Click the button to get inspired and try some new recipies.</p>
               <div className="card-actions justify-end">
                 <Link href={"/embla"}>
-                  <button className="btn btn-primary">Watch</button>
+                  <button className="btn btn-primary">Take me There!</button>
                 </Link>
               </div>
             </div>
@@ -96,7 +95,7 @@ export default function Home() {
               </p>
               <div className="card-actions justify-end">
                 <Link href={"/fabricio"}>
-                  <button className="btn btn-primary">Watch</button>
+                  <button className="btn btn-primary">Take me There!</button>
                 </Link>
               </div>
             </div>
@@ -119,7 +118,7 @@ export default function Home() {
               </p>
               <div className="card-actions justify-end">
                 <Link href={"/mustaf"}>
-                  <button className="btn btn-primary">Watch</button>
+                  <button className="btn btn-primary">Take me There!</button>
                 </Link>
               </div>
             </div>
@@ -150,6 +149,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  
   );
 }
