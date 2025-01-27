@@ -4,7 +4,7 @@ import { useState } from "react";
 const startPrompt =
   "Generate a random quiz question in plain text on the topic: ";
 const endPrompt =
-  ". Provide the question in plain text. Then, provide three options in plain text where Option 1 is the correct answer, Option 2 and Option 3 are incorrect but reasonable answers. Output the question in plain text, followed by options like: Option 1: ..., Option 2: ..., Option 3: ....";
+  ". Provide the question in plain text. Then, provide three options in plain text where Option 1 is the correct answer, Option 2 and Option 3 are incorrect but reasonable answers. Output the question in plain text, followed by options like: A: ..., B: ..., C: ....";
 
 export default function Quiz() {
   const [topic, setTopic] = useState("");
@@ -54,7 +54,7 @@ export default function Quiz() {
             <h2 className="text-xl md:text-3xl font-semibold">
               Choose a topic for your quiz
             </h2>
-            <div className="flex flex-col justify-center items-center gap-3 mt-6">
+            <div className="md:grid md:grid-cols-3 md:justify-center md:items-center md:gap-5 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center justify-items-center mx-auto">
               {[
                 "Science",
                 "History",
@@ -78,7 +78,7 @@ export default function Quiz() {
                 <button
                   key={topic}
                   onClick={() => getQuestion(topic)}
-                  className="btn btn-primary max-w-xs"
+                  className="btn btn-primary w-full"
                 >
                   {topic}
                 </button>
