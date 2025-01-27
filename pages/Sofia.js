@@ -15,16 +15,6 @@ export default function Music() {
     setAnswer(answerText);
   }
 
-  // <div
-  //     className="grid bg-cover bg-center"
-  //     style={{
-  //       backgroundImage:
-  //         "url(https://img.freepik.com/free-photo/simple-smooth-fabric-textured-background_53876-108254.jpg?ga=GA1.1.1667245943.1733688417)",
-  //     }}>
-  //     <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold ">
-  //       30-minute recipe suggestions
-  //     </h2>
-
   return (
     <div
       className="grid bg-cover bg-center"
@@ -38,39 +28,42 @@ export default function Music() {
         <h2 className="text-2xl">
           Choose a genre and AI will recommend songs based on your choice
         </h2>
-
-        <div className="mt-20">
-          <h3 className="text-2xl font-bold">Check out:</h3>
-          <p>{answer}</p>
-        </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {[
-          "Pop",
-          "Jazz",
-          "Rock",
-          "Hip-Hop",
-          "R&B",
-          "Metal",
-          "K-pop",
-          "Techno",
-          "Classical",
-        ].map((genre) => (
-          <div
-            key={genre}
-            className="card shadow-xl bg-slate-900 hover:bg-slate-950"
-            onClick={() => sendPrompt(genre)}
-          >
-            <div className="card-body">
-              <h2 className="card-title">{genre}</h2>
-              <h3>Get five {genre}-song recommendations</h3>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Recommend me songs!</button>
+      <div className="flex flex-col-reverse md:flex-col">
+        <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center">
+          {[
+            "Pop",
+            "Jazz",
+            "Rock",
+            "Hip-Hop",
+            "R&B",
+            "Metal",
+            "K-pop",
+            "Techno",
+            "Classical",
+          ].map((genre) => (
+            <div
+              key={genre}
+              className="card shadow-xl bg-slate-900 hover:bg-slate-950"
+              onClick={() => sendPrompt(genre)}
+            >
+              <div className="card-body">
+                <h2 className="card-title">{genre}</h2>
+                <h3>Get five {genre}-song recommendations</h3>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">
+                    Recommend me songs!
+                  </button>
+                </div>
               </div>
             </div>
+          ))}
+          <div className="mt-5 ">
+            <h3 className="text-2xl font-bold">Check out:</h3>
+            <p>{answer}</p>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
