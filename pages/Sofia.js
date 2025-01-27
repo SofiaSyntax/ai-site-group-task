@@ -3,16 +3,19 @@ import { useState } from "react";
 
 const startPrompt = "Give me 5 recommendations for songs based on this genre: ";
 const endPrompt =
-  "Give me the answer as plain text with the following information: song name by artist name and after each artist name use punctuation. ";
+  "Give me the answer as a JSON string of an array containing object with song_name and artist_name as key names. ";
 
 export default function Music() {
-  const [answer, setAnswer] = useState("");
+  const [answer, setAnswer] = useState("[]");
 
   async function sendPrompt(genre) {
     const prompt = startPrompt + genre + endPrompt;
     const result = await model.generateContent(prompt);
     const answerText = result.response.text();
-    setAnswer(answerText);
+    const startIndex = answerText.indexOf("[");
+    const endIndex = answerText.lastIndexOf("]");
+    const jsonString = answerText.substring(startIndex, endIndex + 1);
+    setAnswer(jsonString);
   }
 
   return (
@@ -39,7 +42,7 @@ export default function Music() {
             "Hip-Hop",
             "R&B",
             "Metal",
-            "K-pop",
+            "K-Pop",
             "Techno",
             "Classical",
           ].map((genre) => (
@@ -52,17 +55,23 @@ export default function Music() {
                 <h2 className="card-title">{genre}</h2>
                 <h3>Get five {genre}-song recommendations</h3>
                 <div className="card-actions justify-end">
-                  <button className="btn btn-primary">
-                    Recommend me songs!
-                  </button>
+                  <button className="btn btn-primary">Give me songs</button>
                 </div>
               </div>
             </div>
           ))}
         </div>
         <div className="mt-5">
-          <h3 className="text-2xl font-bold">Check out:</h3>
-          <p>{answer}</p>
+          <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
+            Check out:
+          </h3>
+          <ul className="text-center">
+            {JSON.parse(answer).map((item) => (
+              <li key={item.artist_name + item.song_name} className="list-none">
+                {item.song_name + " - " + item.artist_name}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
