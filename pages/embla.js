@@ -2,10 +2,6 @@ import { model } from "@/util/ai";
 import { useEffect, useState } from "react";
 
 const startPrompt = "30 minute recipe suggestion cooking with:";
-// const namePrompt = " provide the recipe suggestion name in plain text";
-// const ingredientPrompt = " provide the ingredient list in bullet points";
-// const stepByStepPrompt =
-//   " provide the step by step instructions in plain text in an ordered list";
 const endPrompt =
   " give the answer in plain text with the following data: name of the meal, ingredient list, and step-by-steps ";
 
@@ -18,7 +14,6 @@ export default function Recipes() {
     const result = await model.generateContent(prompt);
     const answerText = result.response.text();
     setAnswer(answerText);
-    console.log(answerText);
 
     const newHistory = [...history];
     newHistory.push({ prompt, answer: answerText });
