@@ -18,7 +18,7 @@ export default function Movies() {
         className="grid w-full bg-cover bg-center"
         style={{
           backgroundImage:
-            "url(https://img.freepik.com/free-vector/beautiful-wavy-background_23-2148465606.jpg?ga=GA1.1.1667245943.1733688417&semt=ais_hybrid)",
+            "url(https://img.freepik.com/premium-vector/abstract-technology-particles-lines-background_907220-2036.jpg?ga=GA1.1.1667245943.1733688417&semt=ais_hybrid)",
         }}
       >
         <h2 className="flex justify-center pt-4 text-2xl font-semibold ">
@@ -37,7 +37,7 @@ export default function Movies() {
             "Sci-fi",
           ].map((category) => (
             <button key={category} onClick={() => sendMoviePrompt(category)}>
-              <div className="card bg-cyan-950 w-80 shadow-xl">
+              <div className="card bg-slate-800 shadow-xl hover:bg-slate-900">
                 <div className="card-body">
                   <h2 className="card-title flex justify-center">{category}</h2>
                 </div>
@@ -47,7 +47,7 @@ export default function Movies() {
         </div>
 
         <div>
-          <h3 className=" text-2xl font-semibold">Movies:</h3>
+          <h3 className=" text-2xl font-semibold px-6">Movies:</h3>
           <p className=" font-medium m-4">{answer}</p>
         </div>
       </div>
