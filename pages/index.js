@@ -121,7 +121,7 @@ export default function Home() {
           <figure className="flex-shrink-0 w-40 max-h-52">
             <Image
               className="object-cover min-h-full"
-              src="/images/games.jpg"
+              src="/images/games2.png"
               alt="Games Image"
               width={256}
               height={160}
@@ -129,11 +129,11 @@ export default function Home() {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">Games</h2>
-            <p>Click the button to watch on Jetflix app.</p>
+            <h2 className="card-title">AI Quiz Game</h2>
+            <p>Click the button to start your AI Generated Quiz.</p>
             <div className="card-actions justify-end">
               <Link href={"/ahmet"}>
-                <button className="btn btn-primary">Watch</button>
+                <button className="btn btn-primary">Challenge Accepted</button>
               </Link>
             </div>
           </div>
