@@ -2,14 +2,17 @@ import { model } from "@/util/ai";
 import { useState } from "react";
 
 const startPrompt = " give me 5 movie recommendations based on this genre: ";
+const endPrompt =
+  "Give me the answer as plain text in list of 1-5 with the following information: movie title, director and release date and after each movie title use punctuation. ";
 
 export default function Movies() {
   const [answer, setAnswer] = useState("");
 
   async function sendMoviePrompt(category) {
-    const prompt = startPrompt + category;
+    const prompt = startPrompt + category + endPrompt;
     const result = await model.generateContent(prompt);
-    setAnswer(result.response.text());
+    const answerText = result.response.text();
+    setAnswer(answerText);
   }
 
   return (
@@ -24,11 +27,6 @@ export default function Movies() {
         <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold ">
           Choose a genre, and AI will recommend some movies for you to watch
         </h2>
-
-        <div className="m-4">
-          <h3 className=" text-2xl font-medium px-6">Movie recommendations:</h3>
-          <p>{answer}</p>
-        </div>
 
         <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center ">
           {[
@@ -55,18 +53,13 @@ export default function Movies() {
             </div>
           ))}
         </div>
-        {/* 
         <div className="m-4">
-          <h3 className=" text-2xl font-semibold px-6">Movies:</h3>
-          <div className="mt-4 flex flex-col space-y-4 overflow-y-auto max-h-96">
-            {renderMovies()}
-          </div>
-        </div> */}
+          <h3 className=" text-2xl font-semibold px-6">
+            Movie recommendations:
+          </h3>
+          <p className="m-4 font-semibold">{answer}</p>
+        </div>
       </div>
     </div>
   );
-}
-
-{
-  /* <p className=" font-medium m-4">{answer}</p> */
 }
