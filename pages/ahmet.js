@@ -54,7 +54,7 @@ export default function Quiz() {
             <h2 className="text-xl md:text-3xl font-semibold">
               Choose a topic for your quiz
             </h2>
-            <div className="flex flex-col justify-center items-center gap-3 mt-6">
+            <div className="md:grid md:grid-cols-3 md:justify-center md:items-center md:gap-5 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center justify-items-center mx-auto">
               {[
                 "Science",
                 "History",
@@ -78,7 +78,7 @@ export default function Quiz() {
                 <button
                   key={topic}
                   onClick={() => getQuestion(topic)}
-                  className="btn btn-primary max-w-xs"
+                  className="btn btn-primary w-full"
                 >
                   {topic}
                 </button>
