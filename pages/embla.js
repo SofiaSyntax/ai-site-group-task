@@ -2,15 +2,15 @@ import { model } from "@/util/ai";
 import { useEffect, useState } from "react";
 
 const startPrompt = "30 minute recipe suggestion cooking with:";
-// const endPrompt =
-//   " give me a json for the name of the meal, ingredient list, and step-by-steps ";
+const endPrompt =
+  " give me a json in plain text for the name of the meal, ingredient list, and step-by-steps ";
 
 export default function Recipes() {
   const [answer, setAnswer] = useState("");
   const [history, setHistory] = useState([]);
 
   async function sendPrompt(food) {
-    const prompt = startPrompt + food;
+    const prompt = startPrompt + food + endPrompt;
     const result = await model.generateContent(prompt);
     const answerText = result.response.text();
     setAnswer(answerText);
