@@ -1,9 +1,9 @@
 import { model } from "@/util/ai";
 import { useEffect, useState } from "react";
 
-const startPrompt = "30 minute recipe suggestion cooking with:";
+const startPrompt = "30 minute recipe suggestion cooking with: ";
 const endPrompt =
-  " give the answer in plain text with the following data: name of the meal, ingredient list, and step-by-steps ";
+  " give the answer in plain text with the following data: name of the meal, ingredient list, and step-by-steps.";
 
 export default function Recipes() {
   const [answer, setAnswer] = useState("");
@@ -37,7 +37,7 @@ export default function Recipes() {
         30-minute recipe suggestions
       </h2>
       <div className="flex flex-col-reverse md:flex-col">
-        <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center ">
+        <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 grid grid-cols-1 gap-8 m-4 pt-2 justify-center ">
           {[
             "Chicken",
             "Beef",
