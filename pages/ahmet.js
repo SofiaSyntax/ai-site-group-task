@@ -49,77 +49,79 @@ export default function Quiz() {
             "url(https://img.freepik.com/free-photo/simple-smooth-fabric-textured-background_53876-108254.jpg?ga=GA1.1.1667245943.1733688417)",
         }}
       >
-        {!question && (
-          <div className="text-center p-8">
-            <h2 className="text-xl md:text-3xl font-semibold">
-              Choose a topic for your quiz
-            </h2>
-            <div className="md:grid md:grid-cols-3 md:justify-center md:items-center md:gap-5 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center justify-items-center mx-auto">
-              {[
-                "Science",
-                "History",
-                "6th Grade Mathematics",
-                "Geography",
-                "Movies & Cinema",
-                "TV Shows",
-                "Only for the 90's kids",
-                "Game of Thrones Universe",
-                "Harry Potter Universe",
-                "Superheroes and Villains",
-                "Food around the world",
-                "Famous Art and Artists",
-                "Famous Authors and Their Works",
-                "Music Legends and Albums",
-                "How I Met Your Mother",
-                "Modern Family",
-                "Friends (TV Show)",
-                "Gaming",
-              ].map((topic) => (
-                <button
-                  key={topic}
-                  onClick={() => getQuestion(topic)}
-                  className="btn btn-primary w-full"
-                >
-                  {topic}
-                </button>
-              ))}
+        <div className="md:flex md:flex-col sm:flex sm:flex-col">
+          {!question && (
+            <div className="text-center p-8">
+              <h2 className="text-xl md:text-3xl font-semibold">
+                Choose a topic for your quiz
+              </h2>
+              <div className="md:grid md:grid-cols-3 md:justify-center md:items-center md:gap-5 md:m-6 sm:gap-1 sm:flex sm:flex-col flex flex-wrap gap-8 m-4 pt-2 justify-center justify-items-center mx-auto">
+                {[
+                  "Science",
+                  "History",
+                  "6th Grade Mathematics",
+                  "Geography",
+                  "Movies & Cinema",
+                  "TV Shows",
+                  "Only for the 90's kids",
+                  "Game of Thrones",
+                  "Harry Potter",
+                  "Superheroes and Villains",
+                  "Food around the world",
+                  "Famous Art and Artists",
+                  "Famous Authors and Their Works",
+                  "Music Legends and Albums",
+                  "How I Met Your Mother",
+                  "Modern Family",
+                  "Friends (TV Show)",
+                  "Gaming",
+                ].map((topic) => (
+                  <button
+                    key={topic}
+                    onClick={() => getQuestion(topic)}
+                    className="btn btn-primary w-full"
+                  >
+                    {topic}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {question && (
-          <div className="text-center p-8">
-            <h2 className="text-xl md:text-3xl font-semibold">
-              {question.text}
-            </h2>
-            <div className="flex flex-col justify-center items-center gap-3 mt-6">
-              {question.options.map((option, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleAnswer(option)}
-                  className="btn btn-secondary max-w-xs"
-                >
-                  {option}
-                </button>
-              ))}
+          {question && (
+            <div className="text-center p-8">
+              <h2 className="text-xl md:text-3xl font-semibold">
+                {question.text}
+              </h2>
+              <div className="flex flex-col justify-center items-center gap-3 mt-6">
+                {question.options.map((option, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleAnswer(option)}
+                    className="btn btn-secondary max-w-xs"
+                  >
+                    {option}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
 
-        {feedback && (
-          <div className="text-center p-8">
-            <h3 className="text-xl md:text-3xl font-semibold">{feedback}</h3>
-            <button
-              onClick={() => {
-                setQuestion(null);
-                setFeedback("");
-              }}
-              className="btn btn-accent mt-4"
-            >
-              Try another topic
-            </button>
-          </div>
-        )}
+          {feedback && (
+            <div className="text-center p-8">
+              <h3 className="text-xl md:text-3xl font-semibold">{feedback}</h3>
+              <button
+                onClick={() => {
+                  setQuestion(null);
+                  setFeedback("");
+                }}
+                className="btn btn-accent mt-4"
+              >
+                Try another topic
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
