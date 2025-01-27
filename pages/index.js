@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <div className="hero bg-center">
         <Image
           className=" max-h-96 sm:max-h-80 md:max-h-96 lg:max-h-160 xl:max-h-192"
@@ -101,25 +101,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-        <div className=" md:col-span-2 md:justify-self-center card card-side bg-base-100 shadow-xl">
-          <figure className="flex-shrink-0 w-40 max-h-52">
-            <Image
-              className="object-cover min-h-full"
-              src="/images/games2.png"
-              alt="Games Image"
-              width={256}
-              height={160}
-              layout="responsive"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">AI Quiz Game</h2>
-            <p>Click the button to start your AI Generated Quiz.</p>
-            <div className="card-actions justify-end">
-              <Link href={"/ahmet"}>
-                <button className="btn btn-primary">Challenge Accepted</button>
-              </Link>
           <div className="card card-side bg-base-100 shadow-xl">
             <figure className="flex-shrink-0 w-40 max-h-52">
               <Image
@@ -143,7 +124,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="md:col-span-2 lg:max-w-[516px] md:max-w-[428px] md:justify-self-center card card-side bg-base-100 shadow-xl">
+          <div className="md:col-span-2 md:max-w-[516px] md:justify-self-center card card-side bg-base-100 shadow-xl">
             <figure className="flex-shrink-0 w-40 max-h-52">
               <Image
                 className="object-cover min-h-full"
