@@ -7,6 +7,7 @@ export default function Home() {
     <div>
       <div className="hero bg-center">
         <Image
+          className=" max-h-96 sm:max-h-80 md:max-h-96 lg:max-h-160 xl:max-h-192"
           src="/images/aiheader.jpg"
           alt="Hero Image"
           width={2000}
@@ -31,10 +32,14 @@ export default function Home() {
       </div>
       <div className="md:grid md:grid-cols-2 flex flex-col gap-4 m-4">
         <div className="card card-side bg-base-100 shadow-xl ">
-          <figure>
-            <img
-              src="https://img.freepik.com/free-photo/black-boy-posing-with-vinyls_23-2148171547.jpg?t=st=1737645682~exp=1737649282~hmac=6a96d81370cb3bb8002afdb5dd121f1df0270b79d62cb773ceff132ab1b68e84&w=900"
-              alt="Music"
+          <figure className="flex-shrink-0 w-40 max-h-52">
+            <Image
+              className="object-cover min-h-full"
+              src="/images/redvinyle.jpg"
+              alt="Vinyle image"
+              width={256}
+              height={160}
+              layout="responsive"
             />
           </figure>
 
@@ -50,10 +55,14 @@ export default function Home() {
         </div>
 
         <div className="card card-side bg-base-100 shadow-xl">
-          <figure>
-            <img
-              src="https://img.freepik.com/free-photo/arrangement-natural-pigments-with-copy-space_23-2148734363.jpg?t=st=1737647432~exp=1737651032~hmac=996e793f26f567e0cd11321ae68be305f07fbe440d763be7e884a50466f2dcfd&w=1380"
-              alt="Recipes"
+          <figure className="flex-shrink-0 w-40 max-h-52">
+            <Image
+              className="object-cover min-h-full"
+              src="/images/recipies.jpg"
+              alt="Recipies Image"
+              width={256}
+              height={160}
+              layout="responsive"
             />
           </figure>
           <div className="card-body">
@@ -67,10 +76,14 @@ export default function Home() {
           </div>
         </div>
         <div className="card card-side bg-base-100 shadow-xl">
-          <figure>
-            <img
-              src="https://img.freepik.com/free-photo/flat-lay-3d-glasses-movies-clapper-board_23-2149558759.jpg?t=st=1737646494~exp=1737650094~hmac=e5f29c20befefd5685184d1db70d157610de153dea192cabd41691ed1e1ab74d&w=740"
-              alt="Movies"
+          <figure className="flex-shrink-0 w-40 max-h-52">
+            <Image
+              className="object-cover min-h-full"
+              src="/images/movies.jpg"
+              alt="Movies Image"
+              width={256}
+              height={160}
+              layout="responsive"
             />
           </figure>
           <div className="card-body">
@@ -84,10 +97,14 @@ export default function Home() {
           </div>
         </div>
         <div className="card card-side bg-base-100 shadow-xl">
-          <figure>
-            <img
-              src="https://img.freepik.com/free-photo/old-books-arrangement-with-copy-space_23-2148898331.jpg?t=st=1737646712~exp=1737650312~hmac=ef9b7eb2e4f739c725a29020aff013eecb07cd27d0465c13c1452e7d08e72b6b&w=1380"
-              alt="Books"
+          <figure className="flex-shrink-0 w-40 max-h-52">
+            <Image
+              className="object-cover min-h-full"
+              src="/images/books.jpg"
+              alt="Books Image"
+              width={256}
+              height={160}
+              layout="responsive"
             />
           </figure>
           <div className="card-body">
@@ -101,10 +118,14 @@ export default function Home() {
           </div>
         </div>
         <div className=" md:col-span-2 md:justify-self-center card card-side bg-base-100 shadow-xl">
-          <figure>
-            <img
-              src="https://img.freepik.com/free-photo/top-view-virtual-reality-headset-with-joystick_23-2148912728.jpg?t=st=1737647033~exp=1737650633~hmac=c73b70dacce475ad61cf679b4b44ad8cbb5d358096527c7c2566827ad1f32749&w=1800"
-              alt="Games"
+          <figure className="flex-shrink-0 w-40 max-h-52">
+            <Image
+              className="object-cover min-h-full"
+              src="/images/games.jpg"
+              alt="Games Image"
+              width={256}
+              height={160}
+              layout="responsive"
             />
           </figure>
           <div className="card-body">
