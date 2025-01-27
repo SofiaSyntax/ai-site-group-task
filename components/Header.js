@@ -14,7 +14,7 @@ export default function Header() {
         Home
       </Link>
 
-      <ul className="gap-2 hidden md:flex">
+      <ul className="gap-4 hidden md:flex">
         <li>
           <Link href={"/sofia"}>Music</Link>
         </li>

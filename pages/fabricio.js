@@ -1,7 +1,7 @@
 import { model } from "@/util/ai";
 import { useState } from "react";
 
-const startPrompt = " give me 3 random movies from category: ";
+const startPrompt = " give me 5 movie recommendations based on this genre: ";
 
 export default function Movies() {
   const [answer, setAnswer] = useState("");
@@ -15,16 +15,16 @@ export default function Movies() {
   return (
     <div>
       <div
-        className="grid w-full bg-cover bg-center"
+        className="grid bg-cover bg-center"
         style={{
           backgroundImage:
-            "url(https://img.freepik.com/premium-vector/abstract-technology-particles-lines-background_907220-2036.jpg?ga=GA1.1.1667245943.1733688417&semt=ais_hybrid)",
+            "url(https://img.freepik.com/free-photo/simple-smooth-fabric-textured-background_53876-108254.jpg?ga=GA1.1.1667245943.1733688417)",
         }}
       >
-        <h2 className="flex justify-center pt-4 text-2xl font-semibold ">
-          Get 3 random movies to watch from each category:
+        <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold ">
+          Choose a genre, and AI will recommend some movies for you to watch
         </h2>
-        <div className="md:grid md:grid-cols-3 md:justify-center md:gap-16 md:m-6 flex flex-wrap gap-8 m-4 justify-center ">
+        <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center ">
           {[
             "Comedy",
             "Thriller",
@@ -33,16 +33,20 @@ export default function Movies() {
             "Sport",
             "Romance",
             "Anime",
-            "Crime",
+            "Horror",
             "Sci-fi",
           ].map((category) => (
-            <button key={category} onClick={() => sendMoviePrompt(category)}>
-              <div className="card bg-slate-800 shadow-xl hover:bg-slate-900">
+            <div key={category} onClick={() => sendMoviePrompt(category)}>
+              <div className="card shadow-xl bg-slate-900 hover:bg-slate-950 ">
                 <div className="card-body">
-                  <h2 className="card-title flex justify-center">{category}</h2>
+                  <h2 className="card-title">{category}</h2>
+                  <h3>völj bland</h3>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">recommend</button>
+                  </div>
                 </div>
               </div>
-            </button>
+            </div>
           ))}
         </div>
 
