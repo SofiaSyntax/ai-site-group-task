@@ -20,11 +20,16 @@ export default function Books() {
           backgroundImage:
             "url(https://img.freepik.com/free-photo/simple-smooth-fabric-textured-background_53876-108254.jpg?ga=GA1.1.1667245943.1733688417)",
         }}>
-        <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold ">
-          Select a genre, and get book recommendations from AI to read
-        </h2>
+        <div className="text-center m-10">
+          <h1 className="text-4xl ">AI book recommendations</h1>
+          <h2 className="text-2xl">
+            Select a genre, and get book recommendations from AI to read
+          </h2>
+        </div>
+
+        <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold "></h2>
         <div className="flex flex-col-reverse md:flex-col">
-          <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center ">
+          <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 grid grid-cols-1 gap-8 m-4 pt-2 justify-center">
             {[
               "Comedy",
               "Thriller",
@@ -51,7 +56,9 @@ export default function Books() {
           </div>
 
           <div>
-            <h3 className=" text-2xl font-semibold px-6">Books:</h3>
+            <h3 className=" text-2xl font-bold text-center px-6 whitespace-pre-wrap">
+              Books:
+            </h3>
             <p className=" font-medium m-4">{answer}</p>
           </div>
         </div>

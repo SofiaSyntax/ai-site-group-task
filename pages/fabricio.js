@@ -21,14 +21,16 @@ export default function Movies() {
       style={{
         backgroundImage:
           "url(https://img.freepik.com/free-photo/simple-smooth-fabric-textured-background_53876-108254.jpg?ga=GA1.1.1667245943.1733688417)",
-      }}
-    >
-      <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold ">
-        Choose a genre, and AI will recommend some movies for you to watch
-      </h2>
+      }}>
+      <div className="text-center m-10">
+        <h1 className="text-4xl ">AI movie recommendations</h1>
+        <h2 className="text-2xl">
+          Choose a genre, and AI will recommend some movies for you to watch
+        </h2>
+      </div>
 
       <div className="flex flex-col-reverse md:flex-col">
-        <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center ">
+        <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 grid grid-cols-1 gap-8 m-4 pt-2 justify-center">
           {[
             "Comedy",
             "Thriller",
@@ -45,8 +47,8 @@ export default function Movies() {
                 <div className="card-body">
                   <h2 className="card-title">{category}</h2>
                   <h3>Get {category} movies</h3>
-                  <div className="card-actions md:justify-end justify-center">
-                    <button className="btn btn-primary">recommend</button>
+                  <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Recommend</button>
                   </div>
                 </div>
               </div>
@@ -54,7 +56,7 @@ export default function Movies() {
           ))}
         </div>
         <div className="m-2">
-          <h3 className=" text-2xl font-semibold px-6">
+          <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
             Movie recommendations:
           </h3>
           <p className="m-2 font-semibold">{answer}</p>
