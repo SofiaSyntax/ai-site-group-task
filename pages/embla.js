@@ -33,8 +33,8 @@ export default function Recipes() {
         backgroundImage:
           "url(https://img.freepik.com/free-photo/simple-smooth-fabric-textured-background_53876-108254.jpg?ga=GA1.1.1667245943.1733688417)",
       }}>
-      <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold ">
-        30-minute recipe suggestions
+      <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold">
+        Recipe suggestions
       </h2>
       <div className="flex flex-col-reverse md:flex-col">
         <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 grid grid-cols-1 gap-8 m-4 pt-2 justify-center ">
