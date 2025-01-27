@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 
 const startPrompt = "30 minute recipe suggestion cooking with:";
 const endPrompt =
-  " give me a json for the ingredients, step-by-steps, and name of the meal";
+  " give me a json for the name of the meal, ingredient list, and step-by-steps ";
 
 export default function Recipes() {
   // const [prompt, setPrompt] = useState("");
   const [answer, setAnswer] = useState("");
-  // const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState([]);
 
   async function sendPrompt(food) {
     const prompt = startPrompt + food + endPrompt;
@@ -16,27 +16,39 @@ export default function Recipes() {
     const answerText = result.response.text();
     setAnswer(answerText);
 
-    // const newHistory = [...history];
-    // newHistory.push({ prompt, answer: answerText });
-    // setHistory(newHistory);
+    const jsonAnswer = answerText;
+    console.log(jsonAnswer);
+
+    // try {
+    //   const parsedAnswer = JSON.parse(answerText);
+    //   console.log(parsedAnswer);
+    //   setAnswer(parsedAnswer);
+    // } catch (error) {
+    //   console.error("Error parsing json:", error);
+    //   setAnswer(null);
+    // }
+
+    const newHistory = [...history];
+    newHistory.push({ prompt, answer: answerText });
+    setHistory(newHistory);
   }
 
-  async function sendOnPageLoad(question) {
-    const result = await model.generateContent(question);
-    setAnswer(result.response.text());
-  }
-
-  
+  // async function sendOnPageLoad(question) {
+  //   const result = await model.generateContent(question);
+  //   setAnswer(result.response.text());
+  // }
 
   // useEffect(() => {
   //   sendOnPageLoad("give me a 30 minute recipe suggestion cooking with:");
   // }, []);
 
-  // useEffect(() => {
-  //   if (history.length > 0) {
-  //     localStorage.setItem("history", JSON.stringify(history));
-  //   }
-  // }, [history]);
+  useEffect(() => {
+    if (history.length > 0) {
+      localStorage.setItem("history", JSON.stringify(history));
+    }
+  }, [history]);
+
+  
 
   return (
     <div>
@@ -70,7 +82,6 @@ export default function Recipes() {
           </button>
         ))}
       </div>
-
       {/*Add "Loading..."*/}
       <p>{answer}</p>
     </div>
