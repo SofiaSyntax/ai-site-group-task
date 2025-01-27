@@ -75,6 +75,7 @@ export default function Recipes() {
             <div className="card shadow-xl bg-slate-900 hover:bg-slate-950">
               <div className="card-body">
                 <h2 className="card-title">{food}</h2>
+                <h3>Get {food} recommendations</h3>
                 <div className="card-actions justify-center">
                   <button className="btn btn-primary">recommend</button>
                 </div>
