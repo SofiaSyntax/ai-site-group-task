@@ -4,7 +4,7 @@ import { useState } from "react";
 const startPrompt =
   "Generate a random quiz question in plain text on the topic: ";
 const endPrompt =
-  ". Provide the question in plain text. Then, provide three options in plain text where Option 1 is the correct answer, Option 2 and Option 3 are incorrect but reasonable answers. Output the question in plain text, followed by options like: Option 1: ..., Option 2: ..., Option 3: ....";
+  ". Provide the question in plain text. Then, provide three options in plain text where Option 1 is the correct answer, Option 2 and Option 3 are incorrect but reasonable answers. Output the question in plain text, followed by options like: A: ..., B: ..., C: ....";
 
 export default function Quiz() {
   const [topic, setTopic] = useState("");
