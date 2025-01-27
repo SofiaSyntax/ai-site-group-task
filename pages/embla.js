@@ -48,21 +48,18 @@ export default function Recipes() {
     }
   }, [history]);
 
-  
-
   return (
-    <div>
-      <h2 className="text-xl flex justify-center p-4">
+    <div
+      className="grid bg-cover bg-center"
+      style={{
+        backgroundImage:
+          "url(https://img.freepik.com/free-vector/purple-color-background-gradient-modern-design-abstract_343694-2146.jpg?t=st=1737985733~exp=1737989333~hmac=e69f8013ddf485d7546c4d50de652cd3f3c076872ed4dc55412b646574f0b363&w=740)",
+      }}>
+      <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold ">
         30-minute recipe suggestions
       </h2>
-      {/* <input
-        className="border"
-        type="text"
-        onChange={(e) => {
-          setPrompt(e.target.value);
-        }}
-      /> */}
-      <div className="grid grid-cols-2 md:grid-cols-3 md:grid gap-2 p-2">
+
+      <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 flex flex-wrap gap-8 m-4 pt-2 justify-center ">
         {[
           "Chicken",
           "Beef",
@@ -72,14 +69,19 @@ export default function Recipes() {
           "Shrimp",
           "Salmon",
           "Cod",
+          "Halloumi",
         ].map((food) => (
-          <button key={food} onClick={() => sendPrompt(food)}>
-            <div className="card bg-slate-800 shadow-xl hover:bg-slate-900">
+          <div key={food} onClick={() => sendPrompt(food)}>
+            <div className="card shadow-xl bg-slate-900 hover:bg-slate-950">
               <div className="card-body">
-                <h2 className="card-title flex justify-center">{food}</h2>
+                <h2 className="card-title">{food}</h2>
+                <h3>Get {food} recommendations</h3>
+                <div className="card-actions justify-center">
+                  <button className="btn btn-primary">recommend</button>
+                </div>
               </div>
             </div>
-          </button>
+          </div>
         ))}
       </div>
       {/*Add "Loading..."*/}
