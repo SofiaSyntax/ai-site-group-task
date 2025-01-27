@@ -139,9 +139,7 @@ export default function Home() {
               <p>Click the button for your AI Generated Quiz.</p>
               <div className="card-actions justify-end">
                 <Link href={"/ahmet"}>
-                  <button className="btn btn-primary">
-                    Challenge Accepted
-                  </button>
+                  <button className="btn btn-primary">Take me There!</button>
                 </Link>
               </div>
             </div>
