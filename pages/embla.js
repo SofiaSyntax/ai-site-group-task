@@ -76,7 +76,7 @@ export default function Recipes() {
               <div className="card-body">
                 <h2 className="card-title">{food}</h2>
                 <h3>Get {food} recommendations</h3>
-                <div className="card-actions justify-center">
+                <div className="card-actions justify-end">
                   <button className="btn btn-primary">recommend</button>
                 </div>
               </div>
@@ -84,7 +84,6 @@ export default function Recipes() {
           </div>
         ))}
       </div>
-      {/*Add "Loading..."*/}
       <p>{answer}</p>
     </div>
   );
