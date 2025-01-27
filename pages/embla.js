@@ -48,10 +48,8 @@ export default function Recipes() {
     }
   }, [history]);
 
-  
-
   return (
-    <div>
+    <div className="">
       <h2 className="text-xl flex justify-center p-4">
         30-minute recipe suggestions
       </h2>
@@ -73,7 +71,7 @@ export default function Recipes() {
           "Salmon",
           "Cod",
         ].map((food) => (
-          <button key={food} onClick={() => sendPrompt(food)}>
+          <button className="" key={food} onClick={() => sendPrompt(food)}>
             <div className="card bg-slate-800 shadow-xl hover:bg-slate-900">
               <div className="card-body">
                 <h2 className="card-title flex justify-center">{food}</h2>
