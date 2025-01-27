@@ -1,8 +1,7 @@
 import { model } from "@/util/ai";
 import { useState } from "react";
 
-const startPrompt =
-  "Give me 5 recommendations for music artists based on this genre: ";
+const startPrompt = "Give me 5 recommendations for songs based on this genre: ";
 // const endPrompt = " Give me the answer as a JSON with the following data: artist name, song name, and duration of the song.";
 
 export default function Music() {
@@ -22,6 +21,11 @@ export default function Music() {
       <h2 className="text-2xl">
         Choose a genre and AI will recommend songs based on your choice
       </h2>
+
+      <div className="mt-4">
+        <h3 className="text-2xl font-bold">Recommendations:</h3>
+        <p>{answer}</p>
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {["Pop", "Jazz", "Rock", "Hip-Hop", "Classical"].map((genre) => (
@@ -48,11 +52,6 @@ export default function Music() {
       </div>
 
       {loading && <p>Loading...</p>}
-
-      <div className="mt-4">
-        <h3 className="text-2xl font-bold">Recommendations:</h3>
-        <p>{answer}</p>
-      </div>
     </div>
   );
 }
