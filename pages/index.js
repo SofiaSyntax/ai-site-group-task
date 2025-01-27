@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <div className="hero bg-center">
         <Image
           className=" max-h-96 sm:max-h-80 md:max-h-96 lg:max-h-160 xl:max-h-192"
@@ -169,5 +169,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+  
   );
 }
