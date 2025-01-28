@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <div className="hero bg-center">
         <Image
-          className=" max-h-96 sm:max-h-80 md:max-h-96 lg:max-h-160 xl:max-h-192"
+          className="sm:max-h-80 md:max-h-96"
           src="/images/aiheader.jpg"
           alt="Hero Image"
           width={2000}
