@@ -72,9 +72,13 @@ export default function Recipes() {
           <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
             30 minute recipe:
           </h3>
-          <pre className="px-6 whitespace-pre-wrap font-semibold font-sans">
-            {answer}
-          </pre>
+          <div className="card shadow-xl bg-slate-900 hover:bg-slate-950 m-10">
+            <div className="">
+              <pre className="px-6 whitespace-pre-wrap font-semibold font-sans">
+                {answer}
+              </pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>

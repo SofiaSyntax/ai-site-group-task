@@ -59,7 +59,11 @@ export default function Movies() {
           <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
             Movie recommendations:
           </h3>
-          <p className="m-2 font-semibold">{answer}</p>
+          <div className="card shadow-xl bg-slate-900 hover:bg-slate-950 ">
+            <div className="m-2 font-semibold">
+              {answer}
+            </div>
+          </div>
         </div>
       </div>
     </div>

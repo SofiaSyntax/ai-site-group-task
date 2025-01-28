@@ -63,13 +63,19 @@ export default function Music() {
           <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
             Check out:
           </h3>
-          <ul className="text-center">
-            {JSON.parse(answer).map((item) => (
-              <li key={item.artist_name + item.song_name} className="list-none">
-                {item.song_name + " - " + item.artist_name}
-              </li>
-            ))}
-          </ul>
+          <div className="card shadow-xl bg-slate-900 hover:bg-slate-950 m-10">
+            <div className="">
+              <ul className="text-center">
+                {JSON.parse(answer).map((item) => (
+                  <li
+                    key={item.artist_name + item.song_name}
+                    className="list-none">
+                    {item.song_name + " - " + item.artist_name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

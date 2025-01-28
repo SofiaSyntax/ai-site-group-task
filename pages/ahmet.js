@@ -50,8 +50,7 @@ export default function Quiz() {
         style={{
           backgroundImage:
             "url(https://img.freepik.com/free-photo/simple-smooth-fabric-textured-background_53876-108254.jpg?ga=GA1.1.1667245943.1733688417)",
-        }}
-      >
+        }}>
         <div className="md:flex md:flex-col sm:flex sm:flex-col">
           {/* Välj ämne för att starta quiz */}
 
@@ -60,7 +59,7 @@ export default function Quiz() {
               <h2 className="text-xl md:text-3xl font-semibold">
                 Select a topic
               </h2>
-              <div className="md:grid md:grid-cols-3 md:justify-center md:items-center md:gap-5 md:m-6 sm:gap-1 sm:flex sm:flex-col flex flex-wrap gap-8 m-4 pt-2 justify-center justify-items-center mx-auto">
+              <div className="md:grid md:grid-cols-3 md:justify-center md:items-center md:gap-5 md:m-6 gap-1 sm:flex sm:flex-col flex flex-wrap m-4 pt-2 justify-center justify-items-center mx-auto">
                 {[
                   "Science",
                   "History",
@@ -86,8 +85,7 @@ export default function Quiz() {
                     onClick={() =>
                       getQuestion(topic)
                     } /* Efter att ha tryckt på ämne, så hämtas frågan */
-                    className="btn btn-primary w-full"
-                  >
+                    className="btn btn-primary w-full">
                     {topic}
                   </button>
                 ))}
@@ -109,8 +107,7 @@ export default function Quiz() {
                     onClick={() =>
                       handleAnswer(option)
                     } /* Kontrollera svar på vald alternativ */
-                    className="btn btn-secondary max-w-xs"
-                  >
+                    className="btn btn-secondary max-w-xs">
                     {option}
                   </button>
                 ))}
@@ -128,8 +125,7 @@ export default function Quiz() {
                   setQuestion(null); /* Återställ fråga */
                   setFeedback("");
                 }}
-                className="btn btn-accent mt-4"
-              >
+                className="btn btn-accent mt-4">
                 Try another topic
               </button>
             </div>
