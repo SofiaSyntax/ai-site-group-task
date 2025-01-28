@@ -6,7 +6,7 @@ export default function Footer() {
       <aside>
         <Image
           className="max-h-96 sm:max-h-80 md:max-h-96 lg:max-h-160 xl:max-h-192 ml-20"
-          src="/images/amazonlogo.webp"
+          src="/images/IMG_4183.PNG"
           alt="Amazon Logo"
           width={150}
           height={150}
