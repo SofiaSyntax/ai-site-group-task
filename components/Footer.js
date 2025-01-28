@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="footer bg-base-100 text-neutral-content p-10 flex justify-evenly">
+    <footer className="footer bg-base-100 text-neutral-content p-10 flex justify-between">
       <aside>
         <Image
-          className="max-h-96 sm:max-h-80 md:max-h-96 lg:max-h-160 xl:max-h-192"
+          className="max-h-96 sm:max-h-80 md:max-h-96 lg:max-h-160 xl:max-h-192 ml-20"
           src="/images/amazonlogo.webp"
           alt="Amazon Logo"
           width={150}
@@ -14,7 +14,7 @@ export default function Footer() {
       </aside>
       <nav>
         <h6 className="footer-title">Social</h6>
-        <div className="grid grid-flow-col gap-4">
+        <div className="grid grid-flow-col gap-4 mr-20">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
