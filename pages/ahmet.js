@@ -58,7 +58,7 @@ export default function Quiz() {
           {!question && (
             <div className="text-center p-8">
               <h2 className="text-xl md:text-3xl font-semibold">
-                Choose a topic for your quiz
+                Select a topic
               </h2>
               <div className="md:grid md:grid-cols-3 md:justify-center md:items-center md:gap-5 md:m-6 sm:gap-1 sm:flex sm:flex-col flex flex-wrap gap-8 m-4 pt-2 justify-center justify-items-center mx-auto">
                 {[
