@@ -7,35 +7,38 @@ const endPrompt =
   ". Provide the question in plain text. Then, provide three options in plain text where Option 1 is the correct answer, Option 2 and Option 3 are incorrect but reasonable answers. Output the question in plain text, followed by options like: A: ..., B: ..., C: ....";
 
 export default function Quiz() {
-  const [topic, setTopic] = useState("");
-  const [question, setQuestion] = useState(null);
-  const [feedback, setFeedback] = useState("");
+  const [topic, setTopic] = useState(""); // Välj ämne och uppdatera med ämne
+  const [question, setQuestion] = useState(null); // Generera fråga, då den saknas initialt är den satt till null.
+  const [feedback, setFeedback] = useState(""); // Visa feedback rätt/korrekt svar, initialt tom
 
   async function getQuestion(selectedTopic) {
-    const prompt = startPrompt + selectedTopic + endPrompt;
-    const result = await model.generateContent(prompt);
-    const questionData = result.response.text().split("\n");
+    // Hämta fråga baserat på valt ämne
+    const prompt = startPrompt + selectedTopic + endPrompt; // Prompt till Gemini
+    const result = await model.generateContent(prompt); // Invänta svar från Gemini
+    const questionData = result.response.text().split("\n"); // Dela upp frågan och svarsalternativ
 
-    console.log(result);
+    console.log(result); // För att kunna veta vilken index alternativen ska hamna på
 
     const questionText = questionData[0];
     const option1 = questionData[2];
     const option2 = questionData[3];
     const option3 = questionData[4];
 
-    setTopic(selectedTopic);
+    setTopic(selectedTopic); // Uppdatera topic med vald ämne
     setQuestion({
       text: questionText,
-      options: [option1, option2, option3],
+      options: [option1, option2, option3], // Uppdatera med fråga och alternativ. Rätt svar alltid option1.
       correctAnswer: option1,
     });
-    setFeedback("");
+    setFeedback(""); // Nollställ feedback
   }
 
   function handleAnswer(selectedAnswer) {
+    // Hantera svar
     if (selectedAnswer === question.correctAnswer) {
       setFeedback("Correct answer! :)");
     } else {
+      // Jämför vald svar med korrekt svar. Om korrekt, visa Correct, om fel, visa Wrong
       setFeedback("Wrong answer! :(");
     }
   }
@@ -50,6 +53,8 @@ export default function Quiz() {
         }}
       >
         <div className="md:flex md:flex-col sm:flex sm:flex-col">
+          {/* Välj ämne för att starta quiz */}
+
           {!question && (
             <div className="text-center p-8">
               <h2 className="text-xl md:text-3xl font-semibold">
@@ -78,7 +83,9 @@ export default function Quiz() {
                 ].map((topic) => (
                   <button
                     key={topic}
-                    onClick={() => getQuestion(topic)}
+                    onClick={() =>
+                      getQuestion(topic)
+                    } /* Efter att ha tryckt på ämne, så hämtas frågan */
                     className="btn btn-primary w-full"
                   >
                     {topic}
@@ -87,6 +94,8 @@ export default function Quiz() {
               </div>
             </div>
           )}
+
+          {/* Visa fråga och alternativ */}
 
           {question && (
             <div className="text-center p-8">
@@ -97,7 +106,9 @@ export default function Quiz() {
                 {question.options.map((option, index) => (
                   <button
                     key={index}
-                    onClick={() => handleAnswer(option)}
+                    onClick={() =>
+                      handleAnswer(option)
+                    } /* Kontrollera svar på vald alternativ */
                     className="btn btn-secondary max-w-xs"
                   >
                     {option}
@@ -107,12 +118,14 @@ export default function Quiz() {
             </div>
           )}
 
+          {/* Ge feedback */}
+
           {feedback && (
             <div className="text-center p-8">
               <h3 className="text-xl md:text-3xl font-semibold">{feedback}</h3>
               <button
                 onClick={() => {
-                  setQuestion(null);
+                  setQuestion(null); /* Återställ fråga */
                   setFeedback("");
                 }}
                 className="btn btn-accent mt-4"
