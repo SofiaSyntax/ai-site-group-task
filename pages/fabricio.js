@@ -29,7 +29,7 @@ export default function Movies() {
         </h2>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-col">
+      <div className="flex flex-col-reverse">
         <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 grid grid-cols-1 gap-8 m-4 pt-2 justify-center">
           {[
             "Comedy",
@@ -55,13 +55,13 @@ export default function Movies() {
             </div>
           ))}
         </div>
-        <div className="m-2">
-          <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
-            Movie recommendations:
-          </h3>
-          <div className="card shadow-xl bg-slate-900 hover:bg-slate-950 ">
-            <div className="m-2 font-semibold">
-              {answer}
+        <div className="flex justify-center">
+          <div className="max-w-96">
+            <div className="card shadow-xl bg-slate-900 hover:bg-slate-950">
+              <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
+                Movie recommendations:
+              </h3>
+              <div className="m-2 font-semibold">{answer}</div>
             </div>
           </div>
         </div>

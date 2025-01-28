@@ -32,7 +32,7 @@ export default function Music() {
         </h2>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-col">
+      <div className="flex flex-col-reverse">
         <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 grid grid-cols-1 gap-8 m-4 pt-2 justify-center">
           {[
             "Pop",
@@ -59,12 +59,12 @@ export default function Music() {
             </div>
           ))}
         </div>
-        <div className="mt-5">
-          <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
-            Check out:
-          </h3>
-          <div className="card shadow-xl bg-slate-900 hover:bg-slate-950 m-10">
-            <div className="">
+        <div className="flex justify-center">
+          <div className="mt-5 max-w-96">
+            <div className="card shadow-xl bg-slate-900 hover:bg-slate-950">
+              <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
+                Check out:
+              </h3>
               <ul className="text-center">
                 {JSON.parse(answer).map((item) => (
                   <li

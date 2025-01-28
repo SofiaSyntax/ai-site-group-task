@@ -28,7 +28,7 @@ export default function Books() {
         </div>
 
         <h2 className="flex justify-center text-xl pt-4 md:text-2xl font-semibold "></h2>
-        <div className="flex flex-col-reverse md:flex-col">
+        <div className="flex flex-col-reverse">
           <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 grid grid-cols-1 gap-8 m-4 pt-2 justify-center">
             {[
               "Comedy",
@@ -55,11 +55,15 @@ export default function Books() {
             ))}
           </div>
 
-          <div>
-            <h3 className=" text-2xl font-bold text-center px-6 whitespace-pre-wrap">
-              Books:
-            </h3>
-            <p className=" font-medium m-4">{answer}</p>
+          <div className="flex justify-center">
+            <div className="max-w-96">
+              <div className="card shadow-xl bg-slate-900 hover:bg-slate-950">
+                <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
+                  Book recommendations:
+                </h3>
+                <div className="m-2 font-semibold">{answer}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

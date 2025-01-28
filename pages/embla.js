@@ -40,7 +40,7 @@ export default function Recipes() {
           choice
         </h2>
       </div>
-      <div className="flex flex-col-reverse md:flex-col">
+      <div className="flex flex-col-reverse">
         <div className="md:grid md:grid-cols-3 md:justify-center md:gap-14 md:m-6 grid grid-cols-1 gap-8 m-4 pt-2 justify-center">
           {[
             "Chicken",
@@ -68,11 +68,11 @@ export default function Recipes() {
             </div>
           ))}
         </div>
-        <div className="mt-5">
-          <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
-            30 minute recipe:
-          </h3>
-          <div className="card shadow-xl bg-slate-900 hover:bg-slate-950 m-10">
+        <div className="mt-5 flex justify-center">
+          <div className="card shadow-xl bg-slate-900 hover:bg-slate-950 m-10 max-w-96">
+            <h3 className="text-2xl font-bold text-center px-6 whitespace-pre-wrap">
+              30 minute recipe:
+            </h3>
             <div className="">
               <pre className="px-6 whitespace-pre-wrap font-semibold font-sans">
                 {answer}
